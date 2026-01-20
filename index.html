@@ -3,7 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CogniTrack - Executive Function Assessment</title>
+    <meta name="description" content="CogniTrack - Free AI-powered cognitive health assessment tool for Wyoming students. Measure working memory, focus, and detect burnout. Get personalized mental health recommendations.">
+    <meta name="keywords" content="Wyoming, student mental health, cognitive assessment, ADHD, burnout, executive function, Wyoming students">
+    <meta name="author" content="CogniTrack Wyoming">
+    <meta property="og:title" content="CogniTrack - Cognitive Health for Wyoming Students">
+    <meta property="og:description" content="Free AI-powered tool to measure cognitive health and prevent burnout. Built for Wyoming students.">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <title>CogniTrack - Cognitive Health for Wyoming Students</title>
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -460,6 +467,195 @@ body {
     width: 18px;
     height: 18px;
     color: var(--accent-primary);
+}
+
+/* Wyoming Banner */
+.wyoming-banner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+    padding: 24px 32px;
+    background: rgba(59, 130, 246, 0.08);
+    border: 1px solid rgba(59, 130, 246, 0.15);
+    border-radius: var(--radius-lg);
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+.banner-stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 4px;
+}
+
+.stat-number {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--accent-secondary);
+}
+
+.stat-label {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    max-width: 200px;
+}
+
+.banner-divider {
+    width: 1px;
+    height: 50px;
+    background: rgba(59, 130, 246, 0.2);
+}
+
+.wyoming-flag {
+    margin-right: 6px;
+}
+
+/* Wyoming Resources Section */
+.wyoming-resources {
+    background: var(--gradient-card);
+    border: 1px solid rgba(59, 130, 246, 0.1);
+    border-radius: var(--radius-xl);
+    padding: 32px;
+    margin-top: 24px;
+}
+
+.wyoming-resources h3 {
+    font-family: var(--font-display);
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.resource-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+}
+
+.resource-card {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background: var(--bg-secondary);
+    border-radius: var(--radius-md);
+    border: 1px solid rgba(59, 130, 246, 0.1);
+    transition: all var(--transition-fast);
+}
+
+.resource-card:hover {
+    border-color: var(--accent-primary);
+    background: rgba(59, 130, 246, 0.05);
+}
+
+.resource-card h4 {
+    font-size: 0.95rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: var(--accent-secondary);
+}
+
+.resource-card p {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    margin-bottom: 12px;
+    flex: 1;
+}
+
+.resource-card a {
+    font-size: 0.85rem;
+    color: var(--accent-primary);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.resource-card a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .wyoming-banner {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .banner-divider {
+        width: 100px;
+        height: 1px;
+    }
+}
+
+/* Footer */
+.site-footer {
+    position: relative;
+    z-index: 1;
+    margin-top: 60px;
+    padding: 40px 24px;
+    background: rgba(10, 22, 40, 0.9);
+    border-top: 1px solid rgba(59, 130, 246, 0.1);
+    text-align: center;
+}
+
+.footer-content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.footer-brand {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-family: var(--font-display);
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.footer-logo {
+    font-size: 1.5rem;
+}
+
+.footer-tagline {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+}
+
+.footer-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.footer-links a {
+    color: var(--accent-secondary);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: color var(--transition-fast);
+}
+
+.footer-links a:hover {
+    color: var(--accent-light);
+}
+
+.footer-divider {
+    color: var(--text-muted);
+}
+
+.footer-copyright {
+    color: var(--text-muted);
+    font-size: 0.85rem;
 }
 
 /* Progress Indicator */
@@ -1606,15 +1802,18 @@ kbd {
             <!-- Screen 1: Welcome -->
             <section class="screen active" id="welcomeScreen">
                 <div class="welcome-content">
-                    <div class="welcome-badge">AI-Powered Cognitive Assessment</div>
+                    <div class="welcome-badge">
+                        <span class="wyoming-flag">🦬</span>
+                        AI-Powered Cognitive Assessment for Wyoming
+                    </div>
                     <h1 class="welcome-title">
-                        Understand Your<br>
-                        <span class="gradient-text">Executive Function</span>
+                        Supporting Wyoming's<br>
+                        <span class="gradient-text">Student Mental Health</span>
                     </h1>
                     <p class="welcome-description">
-                        A neuroscience-based tool that measures working memory, attention control, 
-                        and cognitive fatigue. Get personalized, evidence-based recommendations 
-                        to optimize your mental performance.
+                        A free, neuroscience-based tool built for Wyoming students. Measure your working memory, 
+                        attention control, and cognitive fatigue. Get personalized, evidence-based recommendations 
+                        to help you thrive academically and mentally.
                     </p>
                     
                     <div class="welcome-features">
@@ -1629,7 +1828,7 @@ kbd {
                                 </svg>
                             </div>
                             <h3>Working Memory</h3>
-                            <p>Test your ability to hold and manipulate visual-spatial information in mind</p>
+                            <p>Test your ability to hold and process information—essential for studying and test-taking</p>
                         </div>
                         <div class="feature-card">
                             <div class="feature-icon">
@@ -1638,8 +1837,8 @@ kbd {
                                     <path d="M12 6v6l4 2"/>
                                 </svg>
                             </div>
-                            <h3>Inhibition Control</h3>
-                            <p>Measure your ability to suppress automatic responses and control impulses</p>
+                            <h3>Focus & Control</h3>
+                            <p>Measure your ability to stay on task and resist distractions during long study sessions</p>
                         </div>
                         <div class="feature-card">
                             <div class="feature-icon">
@@ -1647,8 +1846,21 @@ kbd {
                                     <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
                                 </svg>
                             </div>
-                            <h3>Fatigue Detection</h3>
-                            <p>AI analyzes your performance patterns to detect cognitive fatigue</p>
+                            <h3>Burnout Detection</h3>
+                            <p>AI analyzes your performance to detect cognitive fatigue before it becomes burnout</p>
+                        </div>
+                    </div>
+
+                    <!-- Wyoming Stats Banner -->
+                    <div class="wyoming-banner">
+                        <div class="banner-stat">
+                            <span class="stat-number">1 in 5</span>
+                            <span class="stat-label">Wyoming teens report persistent feelings of hopelessness</span>
+                        </div>
+                        <div class="banner-divider"></div>
+                        <div class="banner-stat">
+                            <span class="stat-number">Free</span>
+                            <span class="stat-label">Accessible mental health tools for all Wyoming students</span>
                         </div>
                     </div>
 
@@ -1664,7 +1876,7 @@ kbd {
                             <circle cx="12" cy="12" r="10"/>
                             <path d="M12 16v-4M12 8h.01"/>
                         </svg>
-                        Takes approximately 8-10 minutes. Find a quiet space for best results.
+                        Free for all Wyoming students • Takes 8-10 minutes • Your data stays private
                     </p>
                 </div>
             </section>
@@ -1993,6 +2205,33 @@ kbd {
                         <div class="metrics-grid" id="detailedMetrics"></div>
                     </details>
 
+                    <!-- Wyoming Resources -->
+                    <div class="wyoming-resources">
+                        <h3>🦬 Wyoming Mental Health Resources</h3>
+                        <div class="resource-grid">
+                            <div class="resource-card">
+                                <h4>988 Crisis Line</h4>
+                                <p>Free, confidential support 24/7 for anyone in crisis in Wyoming.</p>
+                                <a href="tel:988">Call or Text 988</a>
+                            </div>
+                            <div class="resource-card">
+                                <h4>Wyoming SAFV Services</h4>
+                                <p>Support for students experiencing stress, anxiety, or difficult situations.</p>
+                                <a href="https://www.wyomingnetwork.org" target="_blank">Visit Website →</a>
+                            </div>
+                            <div class="resource-card">
+                                <h4>WY Dept of Health</h4>
+                                <p>State mental health resources and local provider directories.</p>
+                                <a href="https://health.wyo.gov/behavioralhealth/" target="_blank">Find Resources →</a>
+                            </div>
+                            <div class="resource-card">
+                                <h4>Campus Resources</h4>
+                                <p>UW Counseling Center and community college mental health services.</p>
+                                <a href="https://www.uwyo.edu/ucc/" target="_blank">UW Counseling →</a>
+                            </div>
+                        </div>
+                    </div>
+
                     <div class="results-actions">
                         <button class="btn btn-secondary" id="downloadReportBtn">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -2020,8 +2259,9 @@ kbd {
                             </div>
                             <div class="code-block">
                                 <pre id="pythonCode">"""
-CogniTrack - Executive Function Assessment & Support Tool
+CogniTrack - Cognitive Health Tool for Wyoming Students
 Flask Backend with AI Cognitive Assessment Engine
+Built for Wyoming's student mental health initiative
 """
 
 from flask import Flask, render_template, request, jsonify
@@ -2254,26 +2494,36 @@ if __name__ == '__main__':
         <div class="modal" id="aboutModal">
             <div class="modal-content">
                 <button class="modal-close" id="closeAboutModal">&times;</button>
-                <h2>About CogniTrack</h2>
+                <h2>🦬 About CogniTrack</h2>
                 <p>
-                    CogniTrack is a neuroscience-informed tool designed to help students understand 
-                    their cognitive state and executive function capacity.
+                    CogniTrack is a free, neuroscience-informed tool designed specifically for Wyoming students 
+                    to understand their cognitive state and support their mental health journey.
                 </p>
-                <h3>The Problem We're Solving</h3>
+                <h3>Why Wyoming Needs This</h3>
                 <ul>
-                    <li>Students burn out without understanding why</li>
+                    <li>Wyoming has one of the highest youth suicide rates in the nation</li>
+                    <li>Rural communities often lack accessible mental health resources</li>
+                    <li>Students burn out without understanding why or how to get help</li>
                     <li>Executive dysfunction is often misattributed to "laziness"</li>
-                    <li>There's no accessible way to measure cognitive overload</li>
                 </ul>
                 <h3>Who This Helps</h3>
                 <ul>
+                    <li>Wyoming high school and college students</li>
                     <li>Students with ADHD seeking self-awareness tools</li>
                     <li>Anyone seeking academic accommodations documentation</li>
-                    <li>Individuals interested in cognitive health tracking</li>
+                    <li>Rural students without easy access to mental health professionals</li>
                 </ul>
-                <h3>Privacy First</h3>
+                <h3>Built for Wyoming</h3>
                 <p>
-                    Your data stays on your device. No personal information is collected or stored.
+                    This tool was created as part of a community challenge to address mental health 
+                    needs in Wyoming. It's completely free, works offline, and respects your privacy—no 
+                    data is collected or stored.
+                </p>
+                <h3>Get Help Now</h3>
+                <p>
+                    If you're struggling, please reach out:<br>
+                    <strong>Wyoming 988 Suicide & Crisis Lifeline:</strong> Call or text 988<br>
+                    <strong>Crisis Text Line:</strong> Text "HELLO" to 741741
                 </p>
             </div>
         </div>
@@ -2313,6 +2563,25 @@ if __name__ == '__main__':
                 </p>
             </div>
         </div>
+
+        <!-- Footer -->
+        <footer class="site-footer">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="footer-logo">🦬</span>
+                    <span>CogniTrack Wyoming</span>
+                </div>
+                <p class="footer-tagline">Supporting student mental health across the Equality State</p>
+                <div class="footer-links">
+                    <a href="#about">About</a>
+                    <span class="footer-divider">•</span>
+                    <a href="#science">Science</a>
+                    <span class="footer-divider">•</span>
+                    <a href="tel:988">Crisis: 988</a>
+                </div>
+                <p class="footer-copyright">Built with 💙 for Wyoming students</p>
+            </div>
+        </footer>
     </div>
 
     <script>
@@ -2863,8 +3132,8 @@ function downloadReport() {
     
     const r = AppState.results;
     const report = `
-COGNITRACK COGNITIVE ASSESSMENT REPORT
-======================================
+COGNITRACK - WYOMING STUDENT COGNITIVE ASSESSMENT REPORT
+========================================================
 Generated: ${new Date().toLocaleString()}
 
 SUMMARY
@@ -2886,9 +3155,17 @@ ${r.recommendations.map((rec, i) =>
    ${rec.description}
    Duration: ${rec.duration}`).join('\n\n')}
 
+WYOMING RESOURCES
+-----------------
+If you need support, these resources are available:
+- 988 Suicide & Crisis Lifeline: Call or text 988
+- Crisis Text Line: Text "HELLO" to 741741
+- WY Behavioral Health: health.wyo.gov/behavioralhealth
+- UW Counseling Center: uwyo.edu/ucc
+
 ---
 Note: This assessment is for informational purposes only.
-Powered by CogniTrack - Neuroscience-Based Cognitive Assessment
+Powered by CogniTrack - Supporting Wyoming Student Mental Health
     `.trim();
     
     const blob = new Blob([report], { type: 'text/plain' });
@@ -2913,18 +3190,24 @@ function copyPythonCode() {
 
 // Modal Handlers
 function initModals() {
-    $('a[href="#about"]').addEventListener('click', e => {
-        e.preventDefault();
-        $('#aboutModal').classList.add('active');
+    // About modal - handle all links with #about
+    document.querySelectorAll('a[href="#about"]').forEach(link => {
+        link.addEventListener('click', e => {
+            e.preventDefault();
+            $('#aboutModal').classList.add('active');
+        });
     });
     
     $('#closeAboutModal').addEventListener('click', () => {
         $('#aboutModal').classList.remove('active');
     });
     
-    $('a[href="#science"]').addEventListener('click', e => {
-        e.preventDefault();
-        $('#scienceModal').classList.add('active');
+    // Science modal - handle all links with #science
+    document.querySelectorAll('a[href="#science"]').forEach(link => {
+        link.addEventListener('click', e => {
+            e.preventDefault();
+            $('#scienceModal').classList.add('active');
+        });
     });
     
     $('#closeScienceModal').addEventListener('click', () => {

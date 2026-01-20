@@ -1,0 +1,1 @@
+Cognitrack is a webpage tool designed to access the cognitive strain of users through various methods of memory and recognition testing. This site targets the high rates of ADHD in Wyoming and in the era of technology, cognitive strain has came to an all time high.
